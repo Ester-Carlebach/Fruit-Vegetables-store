@@ -1,0 +1,20 @@
+ <!-- הצגת המוצר -->
+ <div  class="all-product-card">
+ <div class="product-card"  >
+      <h1 class="h1">{{p.prodName}}</h1>
+
+        <img [src]="p.image" class="product-image">
+        <div class="product-content">
+          <div class="product-footer">
+            <p>{{p.description}}</p>
+            <p class="p">{{p.description}}</p>
+            <p class="product-price p" >{{p.price|currency:'ILS'}}</p>
+            <div>
+
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<app-button myClass="fa fa-arrow-left icon" (myFunc)="back()"></app-button>

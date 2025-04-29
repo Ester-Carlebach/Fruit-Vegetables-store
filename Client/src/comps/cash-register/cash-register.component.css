@@ -1,0 +1,12 @@
+*,button{
+    text-align: center;
+}
+.p{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+.pay{
+    background-color: rgb(3, 52, 3);
+    color: azure;
+}

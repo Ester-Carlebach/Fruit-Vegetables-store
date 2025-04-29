@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icons Stock</title>
+    <link rel="stylesheet" href="assets/css/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row justify-content-between">
+                <h1 class="col-12">IconStock - Search for FontAwesome icons offline</h1>
+                <div id="search_wrap" class="col-6 row">
+                    <div class="col-auto">
+                        <label for="search-icon" class="col-form-label">Search</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="search" id="search-icon" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-6 text-end">
+                    <a href="assets/zip/fontawesome.zip" download target="_blank" class="btn btn-primary">
+                        <i class="fa-solid fa-download"></i>
+                        Download files
+                    </a>
+                    <button data-bs-target="#howItWorksModal" data-bs-toggle="modal" class="btn btn-danger">
+                        <i class="fa-solid fa-question"></i>
+                        How it works
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div id="results"></div>
+    </main>
+    <footer>Code by <a href="https://chani-k.co.il/" target="_blank">Chani Kostelitz</a>. Icons by <a
+            href="https://fontawesome.com/icons" target="_blank">fontAwesome</a>.
+    </footer>
+
+    <div class="modal fade" id="icon_modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="exampleModalLabel"></h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <button type="button" class="btn btn-warning" id="copy_content">Copy CSS for before/after</button>
+                    <button type="button" class="btn btn-warning" id="copy_html_tag">Copy HTML tag</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="howItWorksModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h2 class="modal-title fs-5">איך זה עובד?</h2>
+                </div>
+                <div class="modal-body">
+                    <h3>שלב ראשון - הטמעת הספריה בתוך הפרויקט</h3>
+                    <p>ראשית לחצי על הכפתור להורדת הזיפ.</p>
+                    <p>את הזיפ עליך לחלץ. תקבלי תיקיה בשם "fontawesome". הכניסי את התיקיה לתוך הפרויקט שלך.</p>
+                    <p>לאחר מכן עליך להטמיע קישור לקובץ CSS שנמצא בתוך התיקיה, ושם בתוך תיקיה בשם css. הקובץ נקרא
+                        all.min.css. לדוגמה:</p>
+                    <p dir="ltr"><code>
+                        &lt;link rel="stylesheet" href="fontawesome/css/all.min.css"/&gt;
+                    </code></p>
+
+                    <h3>שלב שני - בחירה והצגה של אייקון באתר</h3>
+                    <p>בשדה החיפוש הקלידי את האייקון המבוקש. באנגלית כמובן. לדוגמה smile. מיד יופיעו לך בעמוד כל
+                        האייקונים שקשורים למה שחיפשת.
+                        <br />
+                        כעת לחצי על האייקון הדרוש לך. בפופאפ שנפתח יופיעו 2 כפתורים:
+                    </p>
+                    <ul>
+                        <li>
+                            בעת לחיצה על הכפתור "Copy CSS for before/after" יועתק לך קוד CSS שתוכלי לתת לbefore או
+                            after.
+                        </li>
+                        <li>
+                            בעת לחיצה על הכפתור "Copy HTML tag" - תועתק תגית HTML של האייקון, כדי להטמיע במקום הדרוש
+                            בקובץ
+                            הHTML שלך.
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">סגירה</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

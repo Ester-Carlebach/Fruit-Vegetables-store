@@ -1,0 +1,59 @@
+
+<!-- הצגת הקטגוריות הראשיות והמשניות -->
+<div class="allCat">
+  @for(n of arrCompanies;track n){
+  <div class="dropdown">
+    <div (click)="filterByCompany(n.compId!)" appDir class="dropbtn" name="colors">{{n.compName}}</div>
+    <div class="dropdown-content">
+      {{filt(n.compId!)}}
+      @for(item of x;track item){
+      <a (click)="filterByCategory(item.catId!)">{{item.catName}} </a>
+      }
+    </div>
+  </div>}
+  <!-- כפתור שמציג את כל המוצרים -->
+  <div class="dropdown">
+    <div appDir class="dropbtn" name="colors" (click)="all()">כל המוצרים</div>
+    <div class="dropdown-content">
+    </div>
+  </div>
+  <!-- כפתור ביטול סינון -->
+  <div class="dropdown">
+    <div appDir class="dropbtn" name="colors" (click)="cancelFilter()">בטל סינון</div>
+    <div class="dropdown-content">
+    </div>
+  </div>
+</div>
+<i class="a"></i>
+<!-- סינון -->
+<app-button myClass="fa-regular fa-arrow-down-z-a" (myFunc)="toSort()"></app-button>
+<!-- כל המוצרים -->
+<div class="container-fruit">
+  <div class="allFruit">
+    @for(n of filtArr;track n)
+    {
+
+    <div [ngClass]="n.stockQty==0?'not':'yes'" class="product-card">
+      <h1 class="h1">{{n.prodName}}</h1>
+
+      <img (click)="more(n.prodId!)" [src]="n.image" class="product-image">
+      <div class="product-content">
+        <div class="product-footer">
+          <div [hidden]="n.count" >
+            <app-button myClass="fa fa-shopping-cart icon" (myFunc)="buyFirst(n)" [myDid]="n.stockQty==0"></app-button>
+          </div>
+          <br>
+          <div [hidden]="!n.count">
+            <app-button myClass="fa-solid fa-circle-plus plus-minus" (myFunc)="plus(n)"></app-button>
+            <span id="input-plus-minus" class="plus-minus">{{n.count}}</span>
+            <app-button myClass="fa-sharp fa-solid fa-circle-minus plus-minus" (myFunc)="minus(n)"></app-button>
+          </div>
+          <p class="product-price">{{n.price|currency:'ILS'}}</p>
+
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>
+<router-outlet></router-outlet>

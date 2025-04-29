@@ -1,0 +1,20 @@
+{
+  "name": "iconsstock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass -w assets/scss -o assets/css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "node-sass": "^9.0.0"
+  },
+  "styles": [
+    "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+    "node_modules/primeng/resources/primeng.min.css"
+]
+  
+}

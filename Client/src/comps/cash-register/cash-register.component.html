@@ -1,0 +1,11 @@
+<h1>שלום לך {{cust.currentUser?.CustName}}</h1>
+<h3>הסכום שלך לתשלום</h3>
+<h2>{{shopSer.res.totalSum}}</h2>
+<h5>בקניה זו חסכת:{{shopSer.res.sumDiscount|number}}</h5>
+@if (shopSer.res.birthday) {
+    <h1>🎈🎈מזל טוב ליום הולדתך החל בחודש זה !!!!! 🎈🎈</h1>
+
+}
+<h4>שמחנו לתת שירות</h4>
+<div class="p">
+<button (click)="update()" class="pay">לתשלום</button></div>

@@ -1,0 +1,34 @@
+<div class="container mt-3">
+  <table class="table table-hover">
+    <thead>
+    </thead>
+    <tbody>
+<!-- מכבר על כל הקניה שקיימת לו -->
+      @for(n of shopDetailsService.shopDetailsArr;track n){
+      <tr>
+        <th><img class="img" [src]="n.product.image"></th>
+        <th>{{n.product.prodName}}</th>
+        <th>{{n.product.price!*n.product.count}}</th>
+        <th>{{n.quantity}}</th>
+       <th><app-button myClass="fa-regular fa-trash-can del" (myFunc)="del(n.product)"></app-button></th>
+       <th>
+       <app-button myClass="fa fa-shopping-cart icon" (myFunc)="update(n.product)"></app-button>
+
+        </th>
+      </tr>
+      }
+
+    </tbody>
+  </table>
+  <input [hidden]="custSer.currentUser!=null||shopDetailsService.shopDetailsArr.length==0" placeholder="הכנס תעודת זהות" [(ngModel)]="custId">
+  <br>
+  <br>
+  
+  <button [hidden]="shopDetailsService.shopDetailsArr.length==0" class="" (click)="cashRegister()">לקופה </button>
+ <div class="nob" [hidden]="shopDetailsService.shopDetailsArr.length!=0"  >
+  <div>
+  <span class="aa" >המוצרים שלנו ממתינים לכם</span>
+  <p>קנו מהר לפני שיגמר:)    </p>
+</div>
+</div>
+  <br>

@@ -1,0 +1,16 @@
+.img{
+    width:75px;
+}
+.del,.icon{
+margin-top: 18px;
+font-size:2.1rem; 
+cursor: pointer;
+
+}
+.nob{
+    display: flex;
+    justify-content: center;
+}
+.aa{
+    font-size: 2rem;
+}

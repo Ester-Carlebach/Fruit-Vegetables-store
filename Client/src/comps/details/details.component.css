@@ -1,0 +1,19 @@
+*{
+    text-align: center;
+}
+.product-image{
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+.all-product-card{
+    display: flex;
+    justify-content: center;
+}
+.p{
+    font-size: 1.8rem;
+}
+.icon{
+    font-size: 2.2rem;
+    cursor: pointer;
+}
