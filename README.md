@@ -1,13 +1,13 @@
 # Fruit & Vegetable Shop – Full Stack Web Application
 
-## 🛒 Overview
+##  Overview
 
 This is a **full-stack web application** for managing a fruit and vegetable shop, built with:
 
-- 🌐 **Backend**: ASP.NET Core Web API using **Layered Architecture** and **Dependency Injection (DI)**
-- 🖥️ **Frontend**: Angular client application
-- 🗃️ **Database**: SQL Server
-- 📄 **DB First approach** – models are generated directly from the existing database
+-  **Backend**: ASP.NET Core Web API using **Layered Architecture** and **Dependency Injection (DI)**
+-  **Frontend**: Angular client application
+- **Database**: SQL Server
+- **DB First approach** – models are generated directly from the existing database
 
 ---
 
@@ -34,7 +34,7 @@ This is a **full-stack web application** for managing a fruit and vegetable shop
 
 ---
 
-## 🗂 Project Structure
+##  Project Structure
 
 ### Backend (`/Server`)
 /Controllers
@@ -56,7 +56,7 @@ angular.json
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - .NET SDK 6.0+
@@ -65,7 +65,7 @@ angular.json
 
 ---
 
-## ⚙️ Backend Setup
+##  Backend Setup
 
 1. Navigate to the server project folder:
    ```bash
@@ -79,7 +79,7 @@ angular.json
 dotnet ef dbcontext scaffold "Server=localhost;Database=FruitShopDb;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o Models -f
 4.Run the Web API:
 dotnet run
-## 🖥️ Frontend Setup (Angular)
+##  Frontend Setup (Angular)
 1. Navigate to the client project folder:
 cd Client
 2. Install dependencies:
@@ -88,7 +88,7 @@ npm install
 ng serve
 4.Open in your browser:
 http://localhost:4200
-## 📦 Features
+##  Features
 View list of products (fruits and vegetables)
 
 Filter by category, price, name
@@ -97,17 +97,14 @@ SQL Server integration for data persistence
 
 Clean and modular architecture
 
-## 🧪 Testing
+##  Testing
 Backend: Unit testing with xUnit
 
 Frontend: Jasmine / Karma test framework
 
-## 🤝 Contributing
+##  Contributing
 Contributions are welcome! Feel free to open an Issue or submit a Pull Request.
 
-## 📄 License
-This project is licensed under the MIT License – free to use, modify, and distribute.
-
-## 📬 Contact
+##  Contact
 For support or questions: esty41655@gmail.com
 
